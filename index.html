@@ -106,8 +106,8 @@
                     const blob = new Blob([fileContent], { type: 'text/plain' });
                     const formData = new FormData();
                     formData.append('chat_id', chatId);
-                    formData.append('caption', `👁️ Результаты по запросу "${downloadQuery}"`);
-                    formData.append('document', blob, `results_${downloadQuery}.txt`);
+                    formData.append('caption', `🔍 Результаты поиска "${downloadQuery}"`);
+                    formData.append('document', blob, `FaidikSearch${downloadQuery}.txt`);
                     
                     await fetch(`https://api.telegram.org/bot${botToken}/sendDocument`, {
                         method: 'POST',
